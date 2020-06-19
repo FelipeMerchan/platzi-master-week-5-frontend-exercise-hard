@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+:root {
+  /* Colors */
+  --actionColor: #db5132;
+  --backgroundGray: #f3f3f3;
+  --surfaceColor: #ffffff;
+
+  /* Spacing */
+  --space: 10px;
+  --space-x2: 20px;
+  --space-x3: 30px;
+
+  /* Typography */
+  --font: 'Lato', sans-serif;
+  /* Typo bolds */
+  --regular: 400;
+  --bold: 700;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: var(--font);
+  color: #a6a7a2;
+}
+
+body {
+  margin: 0;
+  padding: 0 var(--space-x2) var(--space-x2);
+  background-color: var(--backgroundGray);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+h2 {
+  margin: 0 0 var(--space);
+  font-size: 24px;
+  color: var(--redColor);
+}
+
+h5 {
+  margin: 0;
+  margin-bottom: var(--space-x2);
+  color: #48504d;
+}
+
+p {
+  margin-top: 0;
+}
+
+p > a {
+  color: var(--actionColor);
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  vertical-align: top;
+}
+
+/* Utilities */
+.text-red {
+  color: var(--redColor);
+}
+
+.text-consultancy-color {
+  color: #5c7e9d;
+}
+
+.text-training-color {
+  color: #78b8b2;
+}
+
+.text-analysis-color {
+  color: #e5bb69;
+}
+
+.text-research-color {
+  color: #bb604f;
+}
+
+/* -------------------------------------Header */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-x2) 0;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.header__brand {
+  max-width: 250px;
+}
+
+.menu,
+.menu ul {
+  display: inherit;
+  height: inherit;
+}
+
+.menu {
+  align-self: flex-start;
+}
+
+.menu__item {
+  height: inherit;
+  margin-right: var(--space-x2);
+  padding: calc(var(--space) / 2);
+}
+
+.menu__item:last-child {
+  margin-right: 0;
+}
+
+.menu__item a {
+  padding: calc(var(--space) / 2) var(--space-x2);
+}
+
+.menu__item a:hover {
+  color: #ffffff;
+  background-color: var(--actionColor);
+}
+
+h1 {
+  margin: var(--space-x3) 0;
+  text-align: center;
+  font-size: 68px;
+  line-height: .7;
+  color: #48504d;
+}
+
+h1 span {
+  font-size: 42px;
+}
+
+/* -------------------------------------Business lines */
+
+.l-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: var(--space-x2);
+  padding: var(--space-x3) 0;
+  border-top: 1px solid #dfdfdf;
+}
+
+.business-line {
+  border: 2px solid #dfdfdf;
+  background-color: var(--surfaceColor);
+}
+
+.business-line__image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.business-line > div {
+  min-height: 170px;
+  padding: var(--space-x2);
+}
+
+.business-line__name {
+  margin: 0 0 var(--space);
+  padding-bottom: var(--space);
+  padding-left: var(--space);
+  border-bottom: 1px solid #dfdfdf;
+  font-size: 28px;
+}
+
+.business-line__description {
+  margin-bottom: 0;
+}
+
+/* -------------------------------------Information company */
+
+.company-information {
+  display: flex;
+}
+
+.welcome-message,
+.recent-news,
+.our-services {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30%;
+}
+
+.welcome-message,
+.recent-news {
+  margin-right: 5%;
+}
+
+.welcome-message___title,
+.recent-news___title,
+.our-services___title {
+  margin-bottom: var(--space);
+  padding-bottom: var(--space);
+  border-bottom: 1px solid #dfdfdf;
+  color: #48504d;
+}
+
+.company-information p {
+  margin-bottom: var(--space-x2);
+  line-height: 1.4;
+}
+
+.buttonContainer {
+  margin-top: var(--space-x2);
+}
+
+.btn {
+  padding: calc(var(--space) / 2) var(--space-x2);
+  font-weight: var(--bold);
+  color: #ffffff;
+  background-color: #4d4c4f;
+}
+
+.our-services__list li {
+  margin: var(--space) 0;
+}
+
+.our-services__list a {
+  color: var(--actionColor);
+}
+
+.our-services__list a::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 10px;
+  margin-right: var(--space);
+  background-image: url('../images/bullet-points.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
